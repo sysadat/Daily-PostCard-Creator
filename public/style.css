@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.pageTitle {
+  font-family: 'Dancing Script', sans-serif;
+  font-size: xx-large;
+  margin: 30px;
+}
+
+.mainBody {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+}
+
+main {
+  flex: 1;
+  margin: auto;
+  width: 95vh;
+}
+
+.postcardArea {
+  display: flex;
+  background-color: #e6e2cf;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chooseImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  border: 2px dashed black;
+  margin: 20px;
+}
+
+.imageWrapper {
+  width: 70%;
+  max-width: 500px;
+}
+
+#serverImage {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+}
+
+#postcardImage {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+}
+
+#imageMessage {
+  color: black;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#fileChooser {
+  display: none;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.symbols {
+  color: black;
+  font-size: 16px;
+}
+
+.shareButton {
+  color: black;
+  background-color: white;
+  font-size: medium;
+  font-weight: bolder;
+  border: 2px solid;
+  border-radius: 0px;
+  padding: 10px 30px;
+  margin: 10px;
+  flex-shrink: 0;
+}
+
+.indieFlower {
+  font-family: 'Indie Flower', sans-serif, Arial;
+  font-size: 20px;
+}
+
+.dancingScript {
+  font-family: 'Dancing Script', sans-serif, Arial;
+  font-size: 20px;
+}
+
+.longCang {
+  font-family: 'Long Cang', sans-serif, Arial;
+  font-size: 22px;
+}
+
+.homemadeApple {
+  font-family: 'Homemade Apple', sans-serif, Arial;
+  font-size: 14px;
+}
+
+#caption {
+  border-left: 1.5px solid black;
+  min-height: 45vh;
+  padding: 20px;
+  flex: 1;
+  font-size: 20px;
+}
+
+[contentEditable=true]:empty:before {
+  content: attr(placeholder);
+  pointer-events: none;
+}
+
+.upload {
+  justify-content: center;
+}
+
+.block {
+  display: block;
+}
+
+.customization {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.customization .shareButton {
+  margin-top: 32px;
+}
+
+.fontSelector {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.fontSelector label {
+  margin: 7px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.fontSelector input {
+  position: absolute;
+  opacity: 0;
+  width: 0px;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.colorsBotton{
+  width: 50px;
+  height: 50px;
+  margin: 7px;
+}
+
+#firstColor {
+  background-color: #e6e2cf;
+}
+
+#secondColor {
+  background-color: #dbcaac;
+}
+
+#thirdColor {
+  background-color: #c9cbb3;
+}
+
+#fourtholor {
+  background-color: #bbc9ca;
+}
+
+#fifthColor {
+  background-color: #a6a5b5;
+}
+
+#sixthColor {
+  background-color: #b5a6ab;
+}
+
+#seventhColor {
+  background-color: #eccfcf;
+}
+
+#eighthColor {
+  background-color: #eceeeb;
+}
+
+#ninthColor {
+  background-color: #bab9b5;
+}
+
+@media only screen and (max-width: 520px) {
+
+  .pageTitle {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    width: auto;
+    margin: 20px;
+  }
+
+  .postcardArea {
+    flex-direction: column;
+    min-height: 500px;
+  }
+
+  .upload {
+    height: 305px;
+  }
+
+  #caption {
+    border-left: none;
+    border-top: 2px solid black;
+  }
+
+  .customization {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Daily Postcard</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+
+  <body class="mainBody">
+    <header class = "pageTitle">
+      <h1>
+        Daily Postcard Creator
+      </h1>
+    </header>
+
+    <main>
+      <div class= "postcardArea">
+        <div class= "chooseImage upload">
+          <div class="imageWrapper">
+              <img id="serverImage"/>
+          </div>
+
+          <div id="controls">
+            <div class = "test">
+              <label for="fileChooser" id="imageMessage">Choose image</label>
+              <input type="file" id="fileChooser" accept="image/png, .jpeg, .jpg, image/gif">
+            </div>
+          </div>
+        </div>
+
+        <div id="caption" class= "indieFlower" contenteditable="true" placeholder="Write your message here!"></div>
+      </div>
+
+      <div class="customization">
+        <div class= "fontSelector">
+          <h2>
+            Choose your font
+          </h2>
+          <form class="fonts">
+            <label for="indieFlower" class="indieFlower" onclick="findFont(0)">
+              <span class="symbols" id="indie">
+                &#x2756;
+              </span>
+              Indie Flower
+              <input type="radio" id="indieFlower" name="font" value="indieFlower" checked>
+            </label>
+            <label for="dancingScript" onclick="findFont(1)">
+              <span class="symbols" id="dancing">
+                &#x20DF;
+              </span>
+              Dancing Script
+              <input type="radio" id="dancingScript" name="font" value="dancingScript" >
+            </label>
+            <label for="longCang" class="longCang" onclick="findFont(2)">
+              <span class="symbols" id="cang">
+                &#x20DF;
+              </span>
+              Long Cang
+              <input type="radio" id="longCang" name="font" value="longCang">
+            </label>
+            <label for="homemadeApple" class="homemadeApple" onclick="findFont(3)">
+              <span class="symbols" id="apple">
+                &#x20DF;
+              </span>
+              Homemade Apple
+              <input type="radio" id="homemadeApple" name="font" value="homemadeApple">
+            </label>
+          </form>
+        </div>
+
+        <div class="colorSelector">
+          <h2>
+            Choose your color
+          </h2>
+
+          <div class="colors">
+            <div class="colorsBotton" id="firstColor" onclick="colorClick(0)" onmouseover="colorHover(0)" onmouseout="colorMouseOut(0)"></div>
+            <div class="colorsBotton" id="secondColor" onclick="colorClick(1)" onmouseover="colorHover(1)" onmouseout="colorMouseOut(1)"></div>
+            <div class="colorsBotton" id="thirdColor" onclick="colorClick(2)" onmouseover="colorHover(2)" onmouseout="colorMouseOut(2)"></div>
+            <div class="colorsBotton" id="fourtholor" onclick="colorClick(3)" onmouseover="colorHover(3)" onmouseout="colorMouseOut(3)"></div>
+            <div class="colorsBotton" id="fifthColor" onclick="colorClick(4)" onmouseover="colorHover(4)" onmouseout="colorMouseOut(4)"></div>
+            <div class="colorsBotton" id="sixthColor" onclick="colorClick(5)" onmouseover="colorHover(5)" onmouseout="colorMouseOut(5)"></div>
+            <div class="colorsBotton" id="seventhColor" onclick="colorClick(6)" onmouseover="colorHover(6)" onmouseout="colorMouseOut(6)"></div>
+            <div class="colorsBotton" id="eighthColor" onclick="colorClick(7)" onmouseover="colorHover(7)" onmouseout="colorMouseOut(7)"></div>
+            <div class="colorsBotton" id="ninthColor" onclick="colorClick(8)" onmouseover="colorHover(8)" onmouseout="colorMouseOut(8)"></div>
+          </div>
+        </div>
+
+        <button class="shareButton" id="share">
+          Share postcard
+        </button>
+      </div>
+
+    </main>
+    <script src="./script.js"></script>
+  </body>
+
+</html>
